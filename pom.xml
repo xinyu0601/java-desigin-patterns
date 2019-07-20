@@ -11,6 +11,8 @@
     <modules>
         <module>factory</module>
         <module>singleton-pattern</module>
+        <module>command</module>
+        <module>state</module>
     </modules>
 
 

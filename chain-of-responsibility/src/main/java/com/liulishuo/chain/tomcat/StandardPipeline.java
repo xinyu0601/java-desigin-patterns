@@ -73,7 +73,11 @@ public class StandardPipeline implements Pipeline {
 
     @Override
     public Valve getFirst() {
-        return (this.first);
+        if (first != null) {
+            return first;
+        }
+
+        return basic;
     }
 
     @Override

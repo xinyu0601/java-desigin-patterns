@@ -12,10 +12,7 @@ final class StandardContextValve extends ValveBase {
     public void invoke(Request request, Response response) {
         System.out.println("Standard context valve");
         StandardWrapper wrapper = new StandardWrapper();
-        if (wrapper.getPipeline().getFirst() != null)
-            wrapper.getPipeline().getFirst().invoke(new Request(), new Response());
-        else
-            wrapper.getPipeline().getBasic().invoke(new Request(), new Response());
+        wrapper.getPipeline().getFirst().invoke(new Request(), new Response());
     }
 
 }
